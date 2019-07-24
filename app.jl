@@ -1,6 +1,6 @@
 #!/usr/bin/julia
 
 push!(LOAD_PATH, pwd())
-import RequestMaker
+using RequestMaker
 
-println(RequestMaker.getURL())
+println(RequestMaker.fetchIt())
