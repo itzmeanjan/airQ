@@ -1,61 +1,7 @@
 #!/usr/bin/julia
 
 module Objectify
-    struct PM2_5
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct PM10
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct NO2
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct NH3
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct SO2
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct CO
-        pollutantId::String
-        pollutantUnit::String
-        pollutantMin::Float32
-        pollutantMax::Float32
-        pollutantAvg::Float32
-        lastUpdate::String
-    end
-
-    struct OZONE
+    struct Pollutant
         pollutantId::String
         pollutantUnit::String
         pollutantMin::Float32
@@ -69,13 +15,7 @@ module Objectify
         city::String
         state::String
         country::String
-        pm2_5::PM2_5
-        pm10::PM10
-        no2::NO2
-        nh3::NH3
-        so2::SO2
-        co::CO
-        ozone::OZONE
+        pollutants::Array{Pollutant}
     end
 
     struct Records
@@ -96,17 +36,34 @@ module Objectify
     end
 
     function buildObject(data::Array{Dict{String, Any}})::Records
-        reduce(data, init = Array{Dict{String, Any}}[]) do acc, cur
+        map(reduce(data, init = Array{Dict{String, Any}}[]) do acc, cur
             if isempty(acc)
                 push!(acc, [cur])
-            elseif any(elem -> any(inner -> isequal(inner["station"], cur["station"]), elem), acc)
+            elseif any(elem -> any(inner -> isequal(inner["station"], cur["station"]) && isequal(inner["city"], cur["city"]) && isequal(inner["state"], cur["state"]), elem), acc)
                 push!(filter(elem -> any(inner -> isequal(inner["station"], cur["station"]), elem), acc)[1], cur)
                 acc
             else
                 push!(acc, [cur])
             end
-        end
-        records::Records = Records()
+        end) do it
+            Record(it[1]["station"],it[1]["city"],it[1]["state"],it[1]["country"], map(it) do elem
+                Pollutant(elem["pollutant_id"], elem["pollutant_unit"], try 
+                    parse(Float32, elem["pollutant_min"])
+                catch
+                    .0f0
+                end,
+                try
+                    parse(Float32, elem["pollutant_max"])
+                catch
+                    .0f0
+                end,
+                try 
+                    parse(Float32, elem["pollutant_avg"])
+                catch 
+                    .0f0 
+                end, elem["last_update"])
+            end)
+        end |> e -> Records(e)
     end
 
     function buildObject(data::Dict{String,Any})::FetchedData
