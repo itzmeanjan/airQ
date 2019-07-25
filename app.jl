@@ -5,4 +5,8 @@ if !(pwd() in LOAD_PATH)
 end
 using RequestMaker
 
-println(RequestMaker.fetchAll())
+try
+    println(RequestMaker.fetchAll())
+catch e
+    println(e)
+end
