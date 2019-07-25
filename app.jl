@@ -1,6 +1,8 @@
 #!/usr/bin/julia
 
-push!(LOAD_PATH, pwd())
+if !(pwd() in LOAD_PATH)
+    push!(LOAD_PATH, pwd())
+end
 using RequestMaker
 
-println(RequestMaker.fetchIt())
+println(RequestMaker.fetchAll())

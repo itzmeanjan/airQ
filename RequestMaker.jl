@@ -1,11 +1,18 @@
 #!/usr/bin/julia
 
+__precompile__(false)
 module RequestMaker
     import HTTP
     import StringEncodings
     import JSON
-    push!(LOAD_PATH, pwd())
+    if !(pwd() in LOAD_PATH)
+        push!(LOAD_PATH, pwd())
+    end
     import Config
+    if !(joinpath(pwd(), "model") in LOAD_PATH)
+        push!(LOAD_PATH, joinpath(pwd(), "model"))
+    end
+    import Objectify
 
     """
         getURL()::String
@@ -32,7 +39,7 @@ module RequestMaker
     end
 
     """
-        fetchIt(url::String)
+        fetchIt()
 
     fetches near real time Air Quality Data from provided URL,
     which is them decoded and parsed properly so that it can be given
@@ -42,7 +49,7 @@ module RequestMaker
 
     # Example
     ```julia-repl
-    julia> fetchIt("target_url")
+    julia> fetchIt()
     Dict{String,Any} with 24 entries:
         "active"        => "1"
         "created_date"  => "2018-11-27T17:39:11Z"
@@ -71,7 +78,7 @@ module RequestMaker
 
     ```
     """
-    function fetchIt(url::String = getURL())::Dict{String,Any}
+    function fetchIt(;url::String = getURL())::Dict{String,Any}
         try
             response::HTTP.Response = HTTP.get(url)
             if response.status != 200
@@ -84,18 +91,28 @@ module RequestMaker
         end
     end
 
-    function fetchAll()::Bool
-        try
-            progress::Dict{String, Int16} = Config.getProgress()
-            if isempty(progress)
-                throw("progress holder missing")
-            else
-                while true
-                    fetchIt()
+    function fetchAll()::Objectify.FetchedData
+        progress::Dict{String, Int16} = Config.getProgress()
+        if isempty(progress)
+            throw("progress holder missing")
+        else
+            offset::Int16 = 0
+            if !Config.updateProgress(offset)
+                throw("failed to update progress")
+            end
+            mainObject::Objectify.FetchedData = Objectify.buildObject(fetchIt())
+            offset = mainObject.offset + mainObject.count
+            if !Config.updateProgress(offset)
+                throw("failed to update progress")
+            end
+            while offset<mainObject.total
+                mainObject = Objectify.mergeObject(mainObject, Objectify.buildObject(fetchIt()))
+                offset = mainObject.offset + mainObject.count
+                if !Config.updateProgress(offset)
+                    throw("failed to update progress")
                 end
             end
-        catch
-            false
         end
+        mainObject
     end
 end

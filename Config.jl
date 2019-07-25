@@ -1,10 +1,11 @@
 #!/usr/bin/julia
 
+__precompile__(false)
 module Config
     import JSON
 
     """
-        getConfig(target_file)
+        getConfig()
 
     reads a configuration file, located at `./config.json`,
     and returns _Dict{String, String}_, holding data.
@@ -32,7 +33,7 @@ module Config
     end
 
     """
-        getProgress(target_file)
+        getProgress()
 
     reads progress holder JSON file, and returns Dict{String, String},
     which can be eventually used to generate URL, where to be queried
@@ -60,7 +61,7 @@ module Config
     end
 
     """
-        updateProgress(offset, limit, target_file)
+        updateProgress(offset)
 
     updates progress holder data file, so that in next iteration it can
     start from proper position
@@ -72,7 +73,7 @@ module Config
 
     ```
     """
-    function updateProgress(offset::Int16, limit::Int16 = 10, target_file::String = "./progress.json")::Bool
+    function updateProgress(offset::Int16, limit::Int16 = Int16(10), target_file::String = "./progress.json")::Bool
         try
             open(target_file, "w") do fd
                 write(fd, JSON.json(Dict{String,Int16}("limit" => limit, "offset" => offset), 4))
