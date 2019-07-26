@@ -8,6 +8,7 @@ __precompile__(false)
     Beware, this module uses a lot of functional programming notations ;)
 """
 module Objectify
+
     """
         Pollutant(pollutantId::String, pollutantUnit::String, pollutantMin::Float32, pollutantMax::Float32, pollutantAvg::Float32, lastUpdate::String)
     
@@ -27,7 +28,6 @@ module Objectify
         pollutantMin::Float32
         pollutantMax::Float32
         pollutantAvg::Float32
-        lastUpdate::String
     end
 
     """
@@ -139,6 +139,17 @@ module Objectify
 
     Which is mainly done here and then we objectify then to an instance of `Records`,
     holding all place records fetched in this iteration
+    
+    
+    Received raw data is having a very critical issue,
+    ( with timestamp ), which doesn't consider AM/ PM
+    though considers Hour field of 01-12,
+    which can eventually lead to very confusing situation,
+    like overwriting of dataset or data clashing
+
+    To avoid so, I've have stopped considering that field,
+    to get idea of when this data was collected, try reading
+    `updated` field in _FetchedData_ object
     """
     function buildObject(data::Array{Dict{String, Any}})::Records
         map(reduce(data, init = Array{Dict{String, Any}}[]) do acc, cur
@@ -166,7 +177,7 @@ module Objectify
                     parse(Float32, elem["pollutant_avg"])
                 catch 
                     .0f0 
-                end, elem["last_update"])
+                end)
             end)
         end |> e -> Records(e)
     end

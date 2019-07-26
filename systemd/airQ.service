@@ -1,0 +1,11 @@
+[Unit]
+Description=A near real-time Air Quality Data collection service
+Wants=airQ.timer
+
+[Service]
+User=anjan
+WorkingDirectory=/home/anjan/Documents/my_programs/still_working/open/airQ
+ExecStart=/usr/bin/julia /home/anjan/Documents/my_programs/still_working/open/airQ/app.jl
+
+[Install]
+WantedBy=multi-user.target

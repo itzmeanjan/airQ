@@ -53,7 +53,7 @@ function dejsonify(target_path::String)::Objectify.FetchedData
         JSON.Parser.parse(StringEncodings.decode(read(fd), "UTF-8"))
     end |> data -> Objectify.FetchedData(data["indexName"], Int32(data["created"]), Int32(data["updated"]), data["title"], data["description"], Int16(data["count"]), Int16(data["limit"]), Int16(data["total"]), Int16(data["offset"]), Objectify.Records(map(data["records"]["all"]) do elem
         Objectify.Record(elem["station"], elem["city"], elem["state"], elem["country"], map(elem["pollutants"]) do innerElem
-            Objectify.Pollutant(innerElem["pollutantId"], innerElem["pollutantUnit"], Float32(innerElem["pollutantMin"]), Float32(innerElem["pollutantMax"]), Float32(innerElem["pollutantAvg"]), innerElem["lastUpdate"])
+            Objectify.Pollutant(innerElem["pollutantId"], innerElem["pollutantUnit"], Float32(innerElem["pollutantMin"]), Float32(innerElem["pollutantMax"]), Float32(innerElem["pollutantAvg"]))
         end)
     end))
 end
@@ -67,7 +67,7 @@ i.e. 24 JSON files, where each of them is designated using their `updation_time.
 But after 24 hours we need to remove non required data files,
 which can be accomplished using this function
 """
-function historicalDataEliminator(target_path::String = joinpath(pwd(), "data"))
+function historicalDataEliminator(target_path::String = joinpath(pwd(), "data"))::Int
     try
         if !isdir(target_path)
             0

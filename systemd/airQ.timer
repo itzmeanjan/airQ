@@ -1,0 +1,10 @@
+[Unit]
+Description=A near real-time Air Quality Data collection service
+Requires=airQ.service
+
+[Timer]
+Unit=airQ.service
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
