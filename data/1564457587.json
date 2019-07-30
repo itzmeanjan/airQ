@@ -1,0 +1,59 @@
+{
+    "indexName": "3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69",
+    "created": 1543320551,
+    "updated": 1564457587,
+    "title": "Real time Air Quality Index from various location",
+    "description": "Real time Air Quality Index from various location",
+    "count": 4,
+    "limit": 10,
+    "total": 4,
+    "offset": 0,
+    "records": {
+        "all": [
+            {
+                "station": "Secretariat, Amaravati - APPCB",
+                "city": "Amaravati",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 7.0,
+                        "pollutantMax": 32.0,
+                        "pollutantAvg": 18.0
+                    }
+                ]
+            },
+            {
+                "station": "Anand Kala Kshetram, Rajamahendravaram - APPCB",
+                "city": "Rajamahendravaram",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    }
+                ]
+            }
+        ]
+    }
+}
