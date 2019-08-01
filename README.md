@@ -1,5 +1,5 @@
 # airQ
-A near real time Air Quality Indicator Data Collection Service, written in _Julia_ with :heart: - _Powered by systemd_
+A near real time Air Quality Indicator Data Collection Service _( only for India )_, written in _Julia_ with :heart: - _Powered by systemd_
 
 **Consider putting :star: to show love & support**
 
