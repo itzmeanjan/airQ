@@ -1,0 +1,907 @@
+{
+    "indexName": "3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69",
+    "created": 1543320551,
+    "updated": 1567966685,
+    "title": "Real time Air Quality Index from various location",
+    "description": "Real time Air Quality Index from various location",
+    "count": 0,
+    "limit": 10,
+    "total": 0,
+    "offset": 100,
+    "records": {
+        "all": [
+            {
+                "station": "Anand Kala Kshetram, Rajamahendravaram - APPCB",
+                "city": "Rajamahendravaram",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 31.0,
+                        "pollutantAvg": 12.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 16.0,
+                        "pollutantMax": 50.0,
+                        "pollutantAvg": 26.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 1.0,
+                        "pollutantMax": 24.0,
+                        "pollutantAvg": 7.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 1.0,
+                        "pollutantMax": 4.0,
+                        "pollutantAvg": 2.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 3.0,
+                        "pollutantMax": 10.0,
+                        "pollutantAvg": 6.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 18.0,
+                        "pollutantMax": 49.0,
+                        "pollutantAvg": 40.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 16.0,
+                        "pollutantMax": 56.0,
+                        "pollutantAvg": 41.0
+                    }
+                ]
+            },
+            {
+                "station": "Tirumala, Tirupati - APPCB",
+                "city": "Tirupati",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 37.0,
+                        "pollutantAvg": 21.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 11.0,
+                        "pollutantMax": 45.0,
+                        "pollutantAvg": 27.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 14.0,
+                        "pollutantMax": 38.0,
+                        "pollutantAvg": 24.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 4.0,
+                        "pollutantMax": 5.0,
+                        "pollutantAvg": 4.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 1.0,
+                        "pollutantMax": 4.0,
+                        "pollutantAvg": 3.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 9.0,
+                        "pollutantMax": 24.0,
+                        "pollutantAvg": 16.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 15.0,
+                        "pollutantMax": 26.0,
+                        "pollutantAvg": 19.0
+                    }
+                ]
+            },
+            {
+                "station": "PWD Grounds, Vijayawada - APPCB",
+                "city": "Vijayawada",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 7.0,
+                        "pollutantMax": 30.0,
+                        "pollutantAvg": 15.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 43.0,
+                        "pollutantAvg": 22.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 2.0,
+                        "pollutantAvg": 2.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 12.0,
+                        "pollutantAvg": 12.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 25.0,
+                        "pollutantAvg": 22.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 6.0,
+                        "pollutantMax": 7.0,
+                        "pollutantAvg": 6.0
+                    }
+                ]
+            },
+            {
+                "station": "GVM Corporation, Visakhapatnam - APPCB",
+                "city": "Visakhapatnam",
+                "state": "Andhra_Pradesh",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 21.0,
+                        "pollutantMax": 100.0,
+                        "pollutantAvg": 39.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 36.0,
+                        "pollutantMax": 156.0,
+                        "pollutantAvg": 76.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 22.0,
+                        "pollutantMax": 74.0,
+                        "pollutantAvg": 40.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 1.0,
+                        "pollutantMax": 2.0,
+                        "pollutantAvg": 2.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 19.0,
+                        "pollutantAvg": 8.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 16.0,
+                        "pollutantMax": 80.0,
+                        "pollutantAvg": 57.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 39.0,
+                        "pollutantAvg": 22.0
+                    }
+                ]
+            },
+            {
+                "station": "Railway Colony, Guwahati - APCB",
+                "city": "Guwahati",
+                "state": "Assam",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 10.0,
+                        "pollutantMax": 82.0,
+                        "pollutantAvg": 42.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 10.0,
+                        "pollutantMax": 88.0,
+                        "pollutantAvg": 48.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 4.0,
+                        "pollutantMax": 26.0,
+                        "pollutantAvg": 10.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 15.0,
+                        "pollutantMax": 15.0,
+                        "pollutantAvg": 15.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 44.0,
+                        "pollutantAvg": 22.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 15.0,
+                        "pollutantMax": 16.0,
+                        "pollutantAvg": 15.0
+                    }
+                ]
+            },
+            {
+                "station": "Collectorate, Gaya - BSPCB",
+                "city": "Gaya",
+                "state": "Bihar",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 0.0,
+                        "pollutantMax": 0.0,
+                        "pollutantAvg": 0.0
+                    }
+                ]
+            },
+            {
+                "station": "Muzaffarpur Collectorate, Muzaffarpur - BSPCB",
+                "city": "Muzaffarpur",
+                "state": "Bihar",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 37.0,
+                        "pollutantAvg": 25.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 69.0,
+                        "pollutantAvg": 12.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 22.0,
+                        "pollutantMax": 75.0,
+                        "pollutantAvg": 50.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 70.0,
+                        "pollutantAvg": 45.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 7.0,
+                        "pollutantMax": 89.0,
+                        "pollutantAvg": 38.0
+                    }
+                ]
+            },
+            {
+                "station": "IGSC Planetarium Complex, Patna - BSPCB",
+                "city": "Patna",
+                "state": "Bihar",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 14.0,
+                        "pollutantMax": 93.0,
+                        "pollutantAvg": 55.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 31.0,
+                        "pollutantMax": 141.0,
+                        "pollutantAvg": 66.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 45.0,
+                        "pollutantMax": 66.0,
+                        "pollutantAvg": 60.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 15.0,
+                        "pollutantMax": 95.0,
+                        "pollutantAvg": 58.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 19.0,
+                        "pollutantMax": 204.0,
+                        "pollutantAvg": 81.0
+                    }
+                ]
+            },
+            {
+                "station": "Alipur, Delhi - DPCC",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 27.0,
+                        "pollutantMax": 95.0,
+                        "pollutantAvg": 41.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 17.0,
+                        "pollutantMax": 78.0,
+                        "pollutantAvg": 45.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 26.0,
+                        "pollutantMax": 45.0,
+                        "pollutantAvg": 34.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 8.0,
+                        "pollutantAvg": 5.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 10.0,
+                        "pollutantMax": 20.0,
+                        "pollutantAvg": 14.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 20.0,
+                        "pollutantMax": 35.0,
+                        "pollutantAvg": 28.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 52.0,
+                        "pollutantAvg": 28.0
+                    }
+                ]
+            },
+            {
+                "station": "Anand Vihar, Delhi - DPCC",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 190.0,
+                        "pollutantAvg": 75.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 44.0,
+                        "pollutantMax": 205.0,
+                        "pollutantAvg": 110.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 193.0,
+                        "pollutantAvg": 49.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 26.0,
+                        "pollutantAvg": 6.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 8.0,
+                        "pollutantMax": 26.0,
+                        "pollutantAvg": 11.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 151.0,
+                        "pollutantAvg": 60.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 8.0,
+                        "pollutantMax": 234.0,
+                        "pollutantAvg": 25.0
+                    }
+                ]
+            },
+            {
+                "station": "Ashok Vihar, Delhi - DPCC",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 75.0,
+                        "pollutantAvg": 42.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 36.0,
+                        "pollutantMax": 111.0,
+                        "pollutantAvg": 66.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 10.0,
+                        "pollutantMax": 48.0,
+                        "pollutantAvg": 27.0
+                    },
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 4.0,
+                        "pollutantMax": 7.0,
+                        "pollutantAvg": 5.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 17.0,
+                        "pollutantMax": 27.0,
+                        "pollutantAvg": 21.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 28.0,
+                        "pollutantMax": 88.0,
+                        "pollutantAvg": 57.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 13.0,
+                        "pollutantMax": 178.0,
+                        "pollutantAvg": 37.0
+                    }
+                ]
+            },
+            {
+                "station": "Burari Crossing, Delhi - IMD",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 33.0,
+                        "pollutantMax": 41.0,
+                        "pollutantAvg": 36.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 38.0,
+                        "pollutantMax": 43.0,
+                        "pollutantAvg": 39.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 22.0,
+                        "pollutantAvg": 18.0
+                    }
+                ]
+            },
+            {
+                "station": "CRRI Mathura Road, Delhi - IMD",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 4.0,
+                        "pollutantMax": 223.0,
+                        "pollutantAvg": 57.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 27.0,
+                        "pollutantMax": 115.0,
+                        "pollutantAvg": 71.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 34.0,
+                        "pollutantMax": 44.0,
+                        "pollutantAvg": 38.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 157.0,
+                        "pollutantAvg": 64.0
+                    }
+                ]
+            },
+            {
+                "station": "DTU, Delhi - CPCB",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 40.0,
+                        "pollutantMax": 131.0,
+                        "pollutantAvg": 68.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 44.0,
+                        "pollutantMax": 174.0,
+                        "pollutantAvg": 81.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 56.0,
+                        "pollutantMax": 131.0,
+                        "pollutantAvg": 75.0
+                    }
+                ]
+            },
+            {
+                "station": "Dwarka-Sector 8, Delhi - DPCC ",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 20.0,
+                        "pollutantAvg": 10.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 38.0,
+                        "pollutantMax": 87.0,
+                        "pollutantAvg": 55.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 3.0,
+                        "pollutantMax": 129.0,
+                        "pollutantAvg": 48.0
+                    }
+                ]
+            },
+            {
+                "station": "IGI Airport (T3), Delhi - IMD",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 6.0,
+                        "pollutantMax": 101.0,
+                        "pollutantAvg": 50.0
+                    },
+                    {
+                        "pollutantId": "PM10",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 28.0,
+                        "pollutantMax": 111.0,
+                        "pollutantAvg": 70.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 41.0,
+                        "pollutantMax": 55.0,
+                        "pollutantAvg": 46.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 37.0,
+                        "pollutantMax": 50.0,
+                        "pollutantAvg": 45.0
+                    }
+                ]
+            },
+            {
+                "station": "IHBAS, Dilshad Garden, Delhi - CPCB",
+                "city": "Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "PM2.5",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 18.0,
+                        "pollutantMax": 67.0,
+                        "pollutantAvg": 39.0
+                    },
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 35.0,
+                        "pollutantMax": 78.0,
+                        "pollutantAvg": 46.0
+                    },
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 17.0,
+                        "pollutantMax": 23.0,
+                        "pollutantAvg": 19.0
+                    }
+                ]
+            },
+            {
+                "station": "Sector-7, Kurukshetra - HSPCB",
+                "city": "Kurukshetra",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 4.0,
+                        "pollutantAvg": 3.0
+                    }
+                ]
+            },
+            {
+                "station": "General Hospital, Mandikhera - HSPCB",
+                "city": "Mandikhera",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 7.0,
+                        "pollutantAvg": 6.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 4.0,
+                        "pollutantAvg": 3.0
+                    }
+                ]
+            },
+            {
+                "station": "Sector-2 IMT, Manesar - HSPCB",
+                "city": "Manesar",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 22.0,
+                        "pollutantMax": 62.0,
+                        "pollutantAvg": 43.0
+                    }
+                ]
+            },
+            {
+                "station": "Shastri Nagar, Narnaul - HSPCB",
+                "city": "Narnaul",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 3.0,
+                        "pollutantAvg": 3.0
+                    }
+                ]
+            },
+            {
+                "station": "Shyam Nagar, Palwal - HSPCB",
+                "city": "Palwal",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "NO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 12.0,
+                        "pollutantMax": 19.0,
+                        "pollutantAvg": 14.0
+                    },
+                    {
+                        "pollutantId": "CO",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 43.0,
+                        "pollutantMax": 61.0,
+                        "pollutantAvg": 45.0
+                    },
+                    {
+                        "pollutantId": "OZONE",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 2.0,
+                        "pollutantMax": 20.0,
+                        "pollutantAvg": 12.0
+                    }
+                ]
+            },
+            {
+                "station": "Sector-6, Panchkula - HSPCB ",
+                "city": "Panchkula",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "SO2",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 7.0,
+                        "pollutantAvg": 6.0
+                    }
+                ]
+            },
+            {
+                "station": "Sector-18, Panipat - HSPCB",
+                "city": "Panipat",
+                "state": "Haryana",
+                "country": "India",
+                "pollutants": [
+                    {
+                        "pollutantId": "NH3",
+                        "pollutantUnit": "NA",
+                        "pollutantMin": 5.0,
+                        "pollutantMax": 10.0,
+                        "pollutantAvg": 8.0
+                    }
+                ]
+            }
+        ]
+    }
+}
