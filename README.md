@@ -1,9 +1,7 @@
 # airQ
-A near real time Air Quality Indicator Data Collection Service _( only for India )_, written in _Julia_ with :heart: - _Powered by systemd_
+A near real time Air Quality Indication Data Collection Service _( for India )_, made with :heart:
 
 **Consider putting :star: to show love & support**
-
-**Construction of Data API _( for you usage )_ is undergoing, coming soon ...** :wink:
 
 _Companion repo located at : [airQ-insight](https://github.com/itzmeanjan/airQ-insight), to power visualization_
 

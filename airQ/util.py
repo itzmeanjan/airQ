@@ -4,19 +4,45 @@ from __future__ import annotations
 from requests import get
 from typing import Dict, Any
 from model.url import RequestURL
+from model.data import Data
+from model.pollutant import Pollutant
+from model.station import Station
 
-def _parse(content: Dict[str, Any]):
-    pass
+def _isStationAlreadyExisiting(name: str, data: Data) -> boolean:
+    return data.get(name) != None
+
+def _makeStationObj(data: Dict[str, str]) -> Station:
+    return Station(data['station'], data['city'], data['state'], data['country'], {})
+
+def _makePollutantObj(data: Dict[str, str], timeStamp: int) -> Pollutant:
+    return Pollutant(data['pollutant_id'], data['pollutant_min'], data['pollutant_max'], data['pollutant_avg'], data['pollutant_unit'], timeStamp, data['station'])
+
+def _parse(content: Dict[str, Any], data: Data):
+    _timeStamp = content['updated']
+    for v in content['records']:
+        pollutantObj = _makePollutantObj(v, _timeStamp)
+        if _isStationAlreadyExisiting(v['station'], data):
+            data.updateStationRecord(pollutantObj)
+        else:
+            data.push(_makeStationObj(v)).updateStationRecord(pollutantObj)
 
 def _fetch(url: str) -> Dict[str, Any]:
-    _resp = get(url)
-    return _resp.json() if _resp.status_code == 200 else None
+    resp = get(url)
+    content = resp.json() if resp.status_code == 200 else None
+    resp.close()
+    return content
 
-
-def request() -> Dict[str, Any]:
-    _req = RequestURL()
-    return _fetch(_req.getURL)
-
+def request() -> Data:
+    try:
+        _req = RequestURL()
+        _data = Data([])
+        for i in _req:
+            _tmp = _fetch(i)
+            if _tmp:
+                _parse(_tmp, _data)
+        return _data
+    except Exception:
+        return None
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')

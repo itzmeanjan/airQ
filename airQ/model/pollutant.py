@@ -2,14 +2,20 @@
 
 from __future__ import annotations
 
+'''
+    Holds record of a Pollutant, which are identified
+    using one id.
+
+    There're two very important fields `timeStamp` & `station`
+'''
 class Pollutant:
-    def __init__(self, _id: str, _min: int, _max: int, _avg: int, _unit: str, _updatedAt: str, station: str):
-        self._id = _id
-        self._min = _min
-        self._max = _max
-        self._avg = _avg
-        self._unit = _unit
-        self._updatedAt = _updatedAt
+    def __init__(self, id: str, min: int, max: int, avg: int, unit: str, timestamp: int, station: str):
+        self._id = id
+        self._min = min
+        self._max = max
+        self._avg = avg
+        self._unit = unit
+        self._timestamp = timestamp
         self.forStation = station
 
 if __name__ == '__main__':

@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "airQ"
+author = "Anjan Roy"
+author-email = "anjanroy@yandex.com"
+home-page = "https://github.com/itzmeanjan/airQ"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
