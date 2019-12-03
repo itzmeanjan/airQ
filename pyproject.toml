@@ -8,4 +8,10 @@ author = "Anjan Roy"
 author-email = "anjanroy@yandex.com"
 home-page = "https://github.com/itzmeanjan/airQ"
 classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python=">=3.7"
 
+[tool.flit.metadata.requires-extra]
+dev=["flit"]
+
+[tool.flit.scripts]
+airQ = "airQ.app:main"

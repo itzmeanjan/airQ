@@ -3,7 +3,7 @@
 from __future__ import annotations
 from os import mkdir
 from os.path import dirname, abspath, exists
-from util import request
+from .util import request
 from json import dump
 from sys import argv
 
@@ -28,7 +28,7 @@ def main():
     print('Working ...')
     data = request()
     if data:
-        writeToJSON(data.toJSON(), sink)
+        _writeToJSON(data.toJSON(), sink)
         print('Success')
     else:
         print('Failed')

@@ -3,10 +3,10 @@
 from __future__ import annotations
 from requests import get
 from typing import Dict, Any
-from model.url import RequestURL
-from model.data import Data
-from model.pollutant import Pollutant
-from model.station import Station
+from .model.url import RequestURL
+from .model.data import Data
+from .model.pollutant import Pollutant
+from .model.station import Station
 
 def _isStationAlreadyExisiting(name: str, data: Data) -> boolean:
     return data.get(name) != None
@@ -41,8 +41,7 @@ def request() -> Data:
             if _tmp:
                 _parse(_tmp, _data)
         return _data
-    except Exception as e:
-        print(e)
+    except Exception:
         return None
 
 if __name__ == '__main__':

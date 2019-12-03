@@ -36,7 +36,9 @@ class RequestURL:
     def __iter__(self):
         while int(self._offset) < self._total:
             yield self._url
-            if int(self._updateOffset((int(self._offset) + 10) % self._total)._offset) == 0:
+            _tmp = int(self._offset) + 10
+            self._updateOffset(0 if _tmp >= self._total else _tmp)
+            if int(self._offset) == 0:
                 break
 
 
