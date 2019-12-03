@@ -28,7 +28,7 @@ def _parse(content: Dict[str, Any], data: Data):
 
 def _fetch(url: str) -> Dict[str, Any]:
     resp = get(url)
-    content = resp.json() if resp.status_code == 200 else None
+    content = resp.json() if resp.ok else None
     resp.close()
     return content
 
@@ -41,7 +41,8 @@ def request() -> Data:
             if _tmp:
                 _parse(_tmp, _data)
         return _data
-    except Exception:
+    except Exception as e:
+        print(e)
         return None
 
 if __name__ == '__main__':

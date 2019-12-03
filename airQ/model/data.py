@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from __future__ import annotations
-from typing import List
+from typing import List, Dict, Any
 from .station import Station
 from .pollutant import Pollutant
 
@@ -42,6 +42,9 @@ class Data:
     def updateStationRecord(self, record: Pollutant):
         self.get(record.forStation).push(record)
         return self
+
+    def toJSON(self) -> Dict[str, Any]:
+        return {'stations' : [i.toJSON() for i in self._stations]}
 
 
 if __name__ == '__main__':

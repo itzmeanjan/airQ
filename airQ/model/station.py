@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from __future__ import annotations
-from typing import Dict, List
+from typing import Dict, List, Any
 from .pollutant import Pollutant
 
 class Station:
@@ -25,6 +25,9 @@ class Station:
             if not self._checkRedundancy(record._id, _holder):
                 _holder.append(record)
         return self
+
+    def toJSON(self) -> Dict[str, Any]:
+        return {'name': self.name, 'city': self.city, 'state': self.state, 'country': self.country, 'records': dict([(k, [i.toJSON() for i in v]) for k, v in self.records.items()])}
 
 
 if __name__ == '__main__':
