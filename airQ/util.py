@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from requests import get
+from json import load
 from typing import Dict, Any
 from .model.url import RequestURL
 from .model.data import Data
@@ -32,10 +33,9 @@ def _fetch(url: str) -> Dict[str, Any]:
     resp.close()
     return content
 
-def request() -> Data:
+def request(_data: Data) -> Data:
     try:
         _req = RequestURL()
-        _data = Data([])
         for i in _req:
             _tmp = _fetch(i)
             if _tmp:
@@ -43,6 +43,13 @@ def request() -> Data:
         return _data
     except Exception:
         return None
+
+def parseExisitingData(source: str) -> Data:
+    try:
+        with open(source, 'r') as fd:
+            return Data.fromJSON(load(fd))
+    except Exception:
+        return Data([])
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')

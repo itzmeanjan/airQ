@@ -29,6 +29,10 @@ class Station:
     def toJSON(self) -> Dict[str, Any]:
         return {'name': self.name, 'city': self.city, 'state': self.state, 'country': self.country, 'records': dict([(k, [i.toJSON() for i in v]) for k, v in self.records.items()])}
 
+    @staticmethod
+    def fromJSON(data: Dict[str, Any]) -> Station:
+        return Station(data['name'], data['city'], data['state'], data['country'], dict([(int(k), [Pollutant.fromJSON(i, int(k), data['name']) for i in v]) for k, v in data['records'].items()]))
+
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')

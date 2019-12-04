@@ -22,6 +22,10 @@ class Pollutant:
     def toJSON(self) -> Dict[str, Any]:
         return {'id': self._id, 'min': self._min, 'max': self._max, 'avg': self._avg, 'unit': self._unit}
 
+    @staticmethod
+    def fromJSON(data: Dict[str, Any], timeStamp: int, station: str) -> Pollutant:
+        return Pollutant(data['id'], data['min'], data['max'], data['avg'], data['unit'], timeStamp, station)
+
 if __name__ == '__main__':
     print('[!]This module is designed to be work as a backend handler')
     exit(0)

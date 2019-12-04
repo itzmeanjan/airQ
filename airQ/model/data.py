@@ -46,6 +46,10 @@ class Data:
     def toJSON(self) -> Dict[str, Any]:
         return {'stations' : [i.toJSON() for i in self._stations]}
 
+    @staticmethod
+    def fromJSON(data: Dict[str, Any]) -> Data:
+        return Data([Station.fromJSON(i) for i in data['stations']])
+
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')

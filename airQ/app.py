@@ -3,7 +3,7 @@
 from __future__ import annotations
 from os import mkdir
 from os.path import dirname, abspath, exists
-from .util import request
+from .util import request, parseExisitingData
 from json import dump
 from sys import argv
 
@@ -26,7 +26,7 @@ def main():
     sink = abspath(sink)
     _makeSinkDir(dirname(sink))
     print('Working ...')
-    data = request()
+    data = request(parseExisitingData(sink))
     if data:
         _writeToJSON(data.toJSON(), sink)
         print('Success')
