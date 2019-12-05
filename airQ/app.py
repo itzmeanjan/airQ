@@ -18,7 +18,7 @@ def _makeSinkDir(sink: str):
 def _handleCMDInputs():
     return argv[1] if len(argv) == 2 and argv[1].endswith('.json') else None
 
-def main():
+def main(maxLimit: int = 72*3600):
     sink = _handleCMDInputs()
     if not sink:
         print('Bad Input')
