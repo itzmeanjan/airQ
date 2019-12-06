@@ -41,9 +41,8 @@ def request(_data: Data) -> Data:
             if _tmp:
                 _parse(_tmp, _data)
         return _data
-    except Exception as e:
-        print(e)
-        return None
+    except Exception:
+        return _data
 
 def parseExisitingData(source: str) -> Data:
     try:

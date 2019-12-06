@@ -43,9 +43,8 @@ class Data:
         self.get(record.forStation).push(record)
         return self
 
-    def toJSON(self) -> Dict[str, Any]:
-        self.removeOutOfRangeValues()
-        return {'stations' : [i.toJSON() for i in self._stations]}
+    def toJSON(self, _range: int) -> Dict[str, Any]:
+        return {'stations' : [i.toJSON() for i in self._removeOutOfRangeValues(_range)._stations]}
 
     @staticmethod
     def fromJSON(data: Dict[str, Any]) -> Data:
@@ -55,7 +54,7 @@ class Data:
     def _getMaxTimeStamp(self) -> int:
         return max([i for i in self._stations[0].records.keys()])
 
-    def removeOutOfRangeValues(self, _range: int = 72*3600):
+    def _removeOutOfRangeValues(self, _range: int):
         _tmp = self._getMaxTimeStamp - _range
         for i in self._stations:
             i.removeOutOfRangeValues(_tmp)
