@@ -13,5 +13,11 @@ requires-python=">=3.7"
 [tool.flit.metadata.requires-extra]
 dev=["flit"]
 
+[tool.flit.sdist]
+exclude=[
+  "data/",
+  "systemd/"
+]
+
 [tool.flit.scripts]
 airQ = "airQ.app:main"
