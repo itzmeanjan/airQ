@@ -1,5 +1,5 @@
 [Unit]
-Description=A near real-time Air Quality Data collection service
+Description=Air Quality Data collection service
 Requires=airQ.service
 
 [Timer]
