@@ -140,6 +140,13 @@ class Data:
     def getCitiesUnderStates(self) -> Dict[str, List[str]]:
         return dict([(k, set([self.get(i).city for i in v])) for k, v in self.getStationsGroupedByState.items()])
 
+    '''
+        Returns a list of air quality monitoring station names
+    '''
+    @property
+    def getStationNames(self) -> List[str]:
+        return [i.name for i in self._stations]
+
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')
