@@ -1,4 +1,4 @@
-# airQ
+# airQ v0.2.2
 A near real time Air Quality Indication Data Collection Service _( for India )_, made with :heart:
 
 **Consider putting :star: to show love & support**
@@ -15,6 +15,7 @@ _Companion repo located at : [airQ-insight](https://github.com/itzmeanjan/airQ-i
 **airQ** can easily be installed from PyPI using pip.
 ```shell script
 $ pip install airQ --user # or may be use pip3
+$ python3 -m pip install airQ --user # if previous one doesn't work
 ```
 ## usage
 After installing **airQ**, run it using following command
