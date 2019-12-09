@@ -1,6 +1,5 @@
 """
-    airQ - Air Quality monitoring data collection system,
-    written in Python3.
+    airQ - Air Quality monitoring data ( for India ) collection system, written in Python3.
 
     This application is available on PyPI.
 
@@ -13,5 +12,5 @@
     Data collection is done is hourly fashion.
 """
 
-__author__='Anjan Roy<anjanroy@yandex.com>'
-__version__='0.2.2'
+__author__ = 'Anjan Roy<anjanroy@yandex.com>'
+__version__ = '0.3.0'

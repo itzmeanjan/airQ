@@ -9,6 +9,8 @@ from typing import Dict, Any
 
     There're two very important fields `timeStamp` & `station`
 '''
+
+
 class Pollutant:
     def __init__(self, id: str, min: int, max: int, avg: int, unit: str, timestamp: int, station: str):
         self._id = id
@@ -25,6 +27,7 @@ class Pollutant:
     @staticmethod
     def fromJSON(data: Dict[str, Any], timeStamp: int, station: str) -> Pollutant:
         return Pollutant(data['id'], data['min'], data['max'], data['avg'], data['unit'], timeStamp, station)
+
 
 if __name__ == '__main__':
     print('[!]This module is designed to be work as a backend handler')

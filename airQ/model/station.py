@@ -6,6 +6,7 @@ from .pollutant import Pollutant
 from datetime import datetime, timedelta
 from operator import sub
 
+
 class Station:
     def __init__(self, name: str, city: str, state: str, country: str, records: Dict[int, List[Pollutant]]):
         self.name = name
@@ -87,6 +88,7 @@ class Station:
         This method will be helpful, when plotting pollutant stat,
         for a certain pollutant type.
     '''
+
     def getPollutantStatByID(self, id: str) -> List[Pollutant]:
         return [i for _, v in self.records.items() for i in v if id == i._id]
 

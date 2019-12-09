@@ -5,6 +5,7 @@ from typing import List, Dict, Any
 from .station import Station
 from .pollutant import Pollutant
 
+
 class Data:
     def __init__(self, stations: List[Station]):
         self._stations = stations
@@ -27,28 +28,31 @@ class Data:
         Well sorting is done
         using air quality monitoring station's names ( ascendingly )
     '''
+
     def push(self, record: Station) -> Data:
-        self._stations.insert(self.__push__(record.name, 0, len(self._stations) - 1), record)
+        self._stations.insert(self.__push__(
+            record.name, 0, len(self._stations) - 1), record)
         return self
 
-    def __get__(self, name: str, low: int, high: int) -> int:
+    def _get(self, name: str, low: int, high: int) -> int:
         if low > high:
             return -1
         elif low == high:
             return low if self._stations[low].name == name else -1
         else:
             mid = low + (high - low) // 2
-            return self.__get__(name, low, mid) \
+            return self._get(name, low, mid) \
                 if self._stations[mid].name >= name \
-                else self.__get__(name, mid + 1, high)
+                else self._get(name, mid + 1, high)
 
     '''
         Given a air quality monitoring station's name,
         it finds out Station instance with that name,
         using binary search ( well of course from a sorted array )
     '''
+
     def get(self, name: str) -> Station:
-        _tmp = self.__get__(name, 0, len(self._stations) - 1)
+        _tmp = self._get(name, 0, len(self._stations) - 1)
         return None if _tmp == -1 else self._stations[_tmp]
 
     def updateStationRecord(self, record: Pollutant):
@@ -60,8 +64,9 @@ class Data:
         when we need to export collected data into JSON,
         for future reference
     '''
+
     def toJSON(self, _range: int) -> Dict[str, Any]:
-        return {'stations' : [i.toJSON() for i in self._removeOutOfRangeValues(_range)._stations]}
+        return {'stations': [i.toJSON() for i in self._removeOutOfRangeValues(_range)._stations]}
 
     '''
         Parse JSON data, and return Data object, holding that
@@ -85,6 +90,7 @@ class Data:
         Remove those pollutant records which are having
         their corresponding timestamp lesser than time range set currently.
     '''
+
     def _removeOutOfRangeValues(self, _range: int):
         _tmp = self._getMaxTimeStamp - _range
         for i in self._stations:

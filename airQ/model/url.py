@@ -5,6 +5,22 @@ from json import load
 from os.path import dirname, abspath, join
 from requests import get
 
+'''
+    Create an instance of this class,
+    and iterate over that, which will generate,
+    some urls, where you can request for air quality monitoring data.
+
+    Actually we've a large collection of data, from 180+ stations,
+    so pushing all those data at a time, not a good decision.
+
+    So API maintainers chose a good approach. They segmented dataset,
+    into multiple small data chunks, which is why multiple GET requests required,
+    ( which segment to be sent, decided based on url params ).
+
+    Now assembling of data is done in Data object.
+'''
+
+
 class RequestURL:
     def __init__(self, config: str = abspath(join(dirname(__file__), '../config.json')), total: int = 10):
         self._config = config
@@ -40,7 +56,6 @@ class RequestURL:
             self._updateOffset(0 if _tmp >= self._total else _tmp)
             if int(self._offset) == 0:
                 break
-
 
 
 if __name__ == "__main__":
