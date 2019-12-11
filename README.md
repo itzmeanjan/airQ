@@ -1,4 +1,4 @@
-# airQ v0.3.0
+# airQ v0.3.1
 A near real time Air Quality Indication Data Collection Service _( for India )_, made with :heart:
 
 **Consider putting :star: to show love & support**
