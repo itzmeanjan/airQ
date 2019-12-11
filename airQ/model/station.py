@@ -92,6 +92,9 @@ class Station:
     def getPollutantStatByID(self, id: str) -> List[Pollutant]:
         return [i for _, v in self.records.items() for i in v if id == i._id]
 
+    def __str__(self) -> str:
+        return '{}, {}, {}'.format(self.name, self.city, self.state)
+
 
 if __name__ == '__main__':
     print('[!]This module is designed to be used as a backend handler')

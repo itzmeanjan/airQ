@@ -26,7 +26,9 @@ class Pollutant:
 
     @staticmethod
     def fromJSON(data: Dict[str, Any], timeStamp: int, station: str) -> Pollutant:
-        return Pollutant(data['id'], data['min'], data['max'], data['avg'], data['unit'], timeStamp, station)
+        return Pollutant(data['id'], int(data['min']) if data['min'].isnumeric() else 0,
+                         int(data['max']) if data['max'].isnumeric() else 0,
+                         int(data['avg']) if data['avg'].isnumeric() else 0, data['unit'], timeStamp, station)
 
 
 if __name__ == '__main__':
