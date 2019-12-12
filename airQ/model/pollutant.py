@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from typing import Dict, Any
+from datetime import datetime
 
 '''
     Holds record of a Pollutant, which are identified
@@ -29,6 +30,10 @@ class Pollutant:
         return Pollutant(data['id'], int(data['min']) if data['min'].isnumeric() else 0,
                          int(data['max']) if data['max'].isnumeric() else 0,
                          int(data['avg']) if data['avg'].isnumeric() else 0, data['unit'], timeStamp, station)
+
+    @property
+    def timeStamp(self) -> datetime:
+        return datetime.fromtimestamp(self._timestamp)
 
 
 if __name__ == '__main__':

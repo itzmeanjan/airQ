@@ -93,7 +93,7 @@ class Station:
         return [i for _, v in self.records.items() for i in v if id == i._id]
 
     def __str__(self) -> str:
-        return '{}, {}, {}'.format(self.name, self.city, self.state)
+        return '{}, {}'.format(self.name, self.state)
 
 
 if __name__ == '__main__':

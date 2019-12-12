@@ -92,6 +92,8 @@ class Data:
     '''
 
     def _removeOutOfRangeValues(self, _range: int):
+        if _range == None:
+            return self
         _tmp = self._getMaxTimeStamp - _range
         for i in self._stations:
             i.removeOutOfRangeValues(_tmp)

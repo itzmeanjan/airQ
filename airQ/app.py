@@ -21,14 +21,19 @@ def _makeSinkDir(sink: str):
 
 
 def _handleCMDInputs() -> Tuple[str, int]:
-    return (argv[1], int(argv[2])) if len(argv) == 3 \
-        and argv[1].endswith('.json') and argv[2].isnumeric() else (None, None)
+    _inputs = ()
+    try:
+        _inputs = (argv[1], int(argv[2])) if len(
+            argv) == 3 and argv[1].endswith('.json') else (None, None)
+    except ValueError:
+        _inputs = (None, None)
+    finally:
+        return _inputs
 
 
 def _usage():
     print('\t$ airQ `sink-file-path_( *.json )_` `past-data-keeper-time-span_( in seconds )_` \
-        \n\n \x1b[3;31;50mFor making modifications on airQ-collected data ( \
-        collected prior to this run ),\n pass that JSON path, while invoking airQ ;)\x1b[0m\n')
+        \n\n \x1b[3;31;50mFor making modifications on airQ-collected data\n (collected prior to this run ), pass that JSON path,\n while invoking airQ ;)\x1b[0m\n')
 
 
 def _displayBanner():
@@ -78,13 +83,13 @@ def main():
     try:
         _displayBanner()
         sink, maxSpan = _handleCMDInputs()
-        if not sink or not maxSpan:
+        if not sink or maxSpan == None:
             _usage()
             print('Bad Input')
         else:
             print('Working ...')
             print('\x1b[1;37;42mSuccess\x1b[0m' if collect(
-                sink, 0 if maxSpan < 0 else maxSpan) else '\x1b[1;37;41mFailed\x1b[0m')
+                sink, None if maxSpan < 0 else maxSpan) else '\x1b[1;37;41mFailed\x1b[0m')
     except KeyboardInterrupt:
         print('\n\x1b[1;37;41mTerminated\x1b[0m')
     finally:
