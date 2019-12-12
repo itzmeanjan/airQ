@@ -23,7 +23,7 @@ class Pollutant:
         self.forStation = station
 
     def toJSON(self) -> Dict[str, Any]:
-        return {'id': self._id, 'min': self._min, 'max': self._max, 'avg': self._avg, 'unit': self._unit}
+        return {'id': self._id, 'min': str(self._min), 'max': str(self._max), 'avg': str(self._avg), 'unit': self._unit}
 
     @staticmethod
     def fromJSON(data: Dict[str, Any], timeStamp: int, station: str) -> Pollutant:
