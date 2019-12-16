@@ -1,4 +1,7 @@
 # airQ v0.3.3
+
+![airQuality ( PM2.5 ) at Alandur Bus Depot,Chennai-CPCB, TamilNadu](airQualityAlandurBusDepot,Chennai-CPCB,TamilNadu_PM2.5_.gif)
+
 A near real time Air Quality Indication Data Collection Service _( for India )_, made with :heart:
 
 **Consider putting :star: to show love & support**
@@ -116,4 +119,4 @@ Consider running your instance of `airQ` on Cloud, mine running on `AWS LightSai
 ## visualization
 This service is supposed to only collect data & properly structure it, but visualization part is done at _[airQ-insight](https://github.com/itzmeanjan/airQ-insight)_
 
-**Hoping it helps** :wink:
+Thanking you :wink:

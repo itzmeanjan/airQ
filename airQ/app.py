@@ -41,7 +41,8 @@ def _displayBanner():
     print('\x1b[1;6;35;50mairQ - Air Quality Data Collector\x1b[0m\n')
 
 
-'''
+def collect(sinkFile: str, maxSpan: int) -> bool:
+    '''
     Invoke this method from other script or applications,
     if you want to utilize airQ's data collection capability
     programmatically.
@@ -56,12 +57,9 @@ def _displayBanner():
     Second arg of this method ( which is in second ), invalidates all data which are older than,
 
     (max-timestamp - maxLimit)
-    
+
     i.e. having timestamp, which are lesser than previously computed value.
-'''
-
-
-def collect(sinkFile: str, maxSpan: int) -> bool:
+    '''
     sinkFile = abspath(sinkFile)
     _makeSinkDir(dirname(sinkFile))
     data = request(parse(sinkFile))
